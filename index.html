@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicPix - Home</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- inportando stylesheet do bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
+
+</head>
+
+<body>
+    <header class="header-container">
+        <h1 class="header-title">PicPix</h1>
+    </header>
+    
+    <main class="main-container">
+        <form class="needs-validation form-container" novalidate>
+            <div class="form-container-div">
+                <h2 class="sub-title">Suas Informações</h2>
+                
+                <center><div class="line"></div></center> 
+
+                <div class="form-group names">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                </div>
+                <div class="form-group names">
+                    <label for="lName">Sobrenome:</label>
+                    <input type="text" class="form-control" id="lName" name="lName" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                </div>
+
+                <h2 class="sub-title">Informações do destinatário</h2>
+
+                <center><div class="line"></div></center> 
+
+                <div class="form-group">
+                    <label for="bank-code">Número da conta (somente números):</label>
+                    <input type="number" class="form-control" id="account-number" placeholder="Ex: 000000000"
+                        name="account-number" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bank">Banco:</label>
+                    <input type="text" class="form-control" id="bank" required name="bank">
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bank-code">Agencia (somente números):</label>
+                    <input type="number" class="form-control" id="bank-code" placeholder="Ex: 001" name="bank-code"
+                        required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="value">Valor (somente números):</label>
+                    <input type="number" class="form-control" id="value" name="value" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label for="obs">Observação(visivel somente para você):</label>
+                    <textarea class="form-control" rows="5" id="obs"></textarea>
+                </div>
+
+                <button type="reset" class="btn btn-primary" onclick="verify()">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('reset', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+    <!--Inportando o script bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Inportando o index.js -->
+
+</body>
+
+</html>
