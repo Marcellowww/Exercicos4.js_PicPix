@@ -53,12 +53,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 50%;
     height: auto;
     margin: 15px;
@@ -114,6 +116,7 @@ input[type=number] {
 .button-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .btn-primary {
@@ -152,6 +155,9 @@ input[type=number] {
     box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 50%);
 }
 
+td{
+    color: white;
+}
 
 
 

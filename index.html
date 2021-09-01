@@ -22,13 +22,15 @@
         <h1 class="header-title">PicPix</h1>
         <h3 class="header-sub-title">Transferir</h3>
     </header>
-    
+
     <main class="main-container">
         <form class="needs-validation form-container" novalidate>
             <div class="form-container-div">
                 <h2 class="sub-title">Suas Informações</h2>
-                
-                <center><div class="line"></div></center> 
+
+                <center>
+                    <div class="line"></div>
+                </center>
 
                 <div class="form-group names">
                     <label for="name">Nome:</label>
@@ -45,7 +47,9 @@
 
                 <h2 class="sub-title">Informações do destinatário</h2>
 
-                <center><div class="line"></div></center> 
+                <center>
+                    <div class="line"></div>
+                </center>
 
                 <div class="form-group">
                     <label for="bank-code">Número da conta (somente números):</label>
@@ -87,7 +91,46 @@
                     <button type="reset" class="btn btn-primary" onclick="verify()">Enviar</button>
                 </div>
             </div>
+
         </form>
+        <div class="confirmation-ticket" style="display: none;" id="confirmation">
+            <h2 class="sub-title">Confirme seus dados</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Nome:</td>
+                        <td>name</td>
+                        <td>lName</td>
+                    </tr>
+                    <tr>
+                        <td>Agencia - Banco:</td>
+                        <td>bank-code</td>
+                        <td>bank</td>
+                    </tr>
+                    <tr>
+                        <td>Número da conta:</td>
+                        <td></td>
+                        <td>account-number</td>
+                    </tr>
+                    <tr>
+                        <td>Valor:</td>
+                        <td></td>
+                        <td>value</td>
+                    </tr>
+                    <tr>
+                        <td>Data:</td>
+                        <td></td>
+                        <td>date</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="button-container">
+                <button type="submit" onclick="reset()" class="btn btn-primary">Enviar</button>
+            </div>
+
+        </div>
+        </div>
     </main>
 
     <script>
